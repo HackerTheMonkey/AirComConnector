@@ -282,7 +282,7 @@ public final class DocNode<T>
         clonnedDocNode.attributesHashMap = new HashMap<String, Attribute<T>>(attributesHashMap);
         clonnedDocNode.childNodes = new ArrayList<DocNode<T>>(childNodes);
         clonnedDocNode.isRootElement = isRootElement; // No need for a defensive copy, it is a primitive and primitves passed by value.        
-        clonnedDocNode.textContent = textContent; // No need for a defensive copy, it is already an immutable class.
+        clonnedDocNode.textContent = textContent; // No need for a defensive copy, the textContent is of type String and String class is an immutable class in java.
         return clonnedDocNode;
     }
 
